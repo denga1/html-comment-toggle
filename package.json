@@ -1,0 +1,62 @@
+{
+  "name": "html-comment-toggle",
+  "displayName": "HTML Comment Toggle",
+  "description": "HTML多行注释切换：解决HTML中无法多行注释的问题，支持Vue模板中的注释切换",
+  "version": "1.0.0",
+  "publisher": "html-comment-toggle",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/html-comment-toggle.git"
+  },
+  "keywords": [
+    "vue",
+    "html",
+    "comment",
+    "toggle",
+    "template",
+    "multiline",
+    "comment-toggle"
+  ],
+  "activationEvents": [
+    "onCommand:html-comment-toggle.toggle"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "html-comment-toggle.toggle",
+        "title": "HTML Comment Toggle",
+        "category": "HTML Comment"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "html-comment-toggle.toggle",
+        "key": "ctrl+shift+/",
+        "mac": "cmd+shift+/",
+        "when": "editorTextFocus && resourceExtname == '.vue'"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}
