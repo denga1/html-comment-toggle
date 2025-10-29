@@ -3,7 +3,7 @@
   "displayName": "HTML Comment Toggle",
   "description": "HTML多行注释切换：解决HTML中无法多行注释的问题，支持Vue模板中的注释切换",
   "version": "1.0.0",
-  "publisher": "html-comment-toggle",
+  "publisher": "denga1",
   "engines": {
     "vscode": "^1.74.0"
   },
