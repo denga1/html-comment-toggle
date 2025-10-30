@@ -2,7 +2,7 @@
   "name": "html-comment-toggle",
   "displayName": "HTML Comment Toggle",
   "description": "HTML多行注释切换：解决HTML中无法多行注释的问题，支持处理内部注释的转义",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "denga1",
   "engines": {
     "vscode": "^1.74.0"
@@ -20,8 +20,12 @@
   "changelog": "CHANGELOG.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/html-comment-toggle.git"
+    "url": "https://github.com/denga1/html-comment-toggle.git"
   },
+  "bugs": {
+    "url": "https://github.com/denga1/html-comment-toggle/issues"
+  },
+  "homepage": "https://github.com/denga1/html-comment-toggle#readme",
   "keywords": [
     "vue",
     "html",
