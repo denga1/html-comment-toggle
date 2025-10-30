@@ -12,26 +12,10 @@ export function activate(context: vscode.ExtensionContext) {
         const document = editor.document;
         const selection = editor.selection;
 
-        // 检查是否在Vue文件中
-        if (!document.fileName.endsWith('.vue')) {
-            vscode.window.showWarningMessage('此功能仅适用于Vue文件');
-            return;
-        }
-
         // 获取选中的文本
         const selectedText = document.getText(selection);
         if (!selectedText.trim()) {
             vscode.window.showWarningMessage('请先选择要切换注释的代码块');
-            return;
-        }
-
-        // 检查是否在template部分
-        const line = selection.start.line;
-        const templateStart = findTemplateStart(document);
-        const templateEnd = findTemplateEnd(document);
-
-        if (templateStart === -1 || templateEnd === -1 || line < templateStart || line > templateEnd) {
-            vscode.window.showWarningMessage('请在template部分使用此功能');
             return;
         }
 
@@ -58,25 +42,6 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposable);
 }
 
-function findTemplateStart(document: vscode.TextDocument): number {
-    for (let i = 0; i < document.lineCount; i++) {
-        const line = document.lineAt(i).text.trim();
-        if (line.startsWith('<template>') || line.startsWith('<template ')) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-function findTemplateEnd(document: vscode.TextDocument): number {
-    for (let i = document.lineCount - 1; i >= 0; i--) {
-        const line = document.lineAt(i).text.trim();
-        if (line === '</template>') {
-            return i;
-        }
-    }
-    return -1;
-}
 
 
 

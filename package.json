@@ -1,7 +1,7 @@
 {
   "name": "html-comment-toggle",
   "displayName": "HTML Comment Toggle",
-  "description": "HTML多行注释切换：解决HTML中无法多行注释的问题，支持Vue模板中的注释切换",
+  "description": "HTML多行注释切换：解决HTML中无法多行注释的问题，支持处理内部注释的转义",
   "version": "1.0.0",
   "publisher": "denga1",
   "engines": {
@@ -11,6 +11,11 @@
     "Other"
   ],
   "icon": "icon.png",
+  "files": [
+    "out/**/*",
+    "icon.png",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/your-username/html-comment-toggle.git"
@@ -41,7 +46,7 @@
         "command": "html-comment-toggle.toggle",
         "key": "ctrl+shift+/",
         "mac": "cmd+shift+/",
-        "when": "editorTextFocus && resourceExtname == '.vue'"
+        "when": "editorTextFocus"
       }
     ]
   },
