@@ -14,8 +14,10 @@
   "files": [
     "out/**/*",
     "icon.png",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
+  "changelog": "CHANGELOG.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/your-username/html-comment-toggle.git"
